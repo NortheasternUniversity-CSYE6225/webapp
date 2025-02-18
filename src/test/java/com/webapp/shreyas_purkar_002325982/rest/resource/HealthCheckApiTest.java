@@ -34,7 +34,7 @@ public class HealthCheckApiTest {
         .when()
                 .get("/healthz")
         .then()
-                .statusCode(200)
+                .statusCode(201)
                 .header("X-Content-Type-Options", "nosniff")
                 .header("Cache-Control", "no-cache, no-store, must-revalidate")
                 .header("Pragma", "no-cache");
@@ -86,7 +86,7 @@ public class HealthCheckApiTest {
         .when()
                 .post("/healthz")
         .then()
-                .statusCode(405)
+                .statusCode(400)
                 .header("X-Content-Type-Options", "nosniff")
                 .header("Cache-Control", "no-cache, no-store, must-revalidate")
                 .header("Pragma", "no-cache");
