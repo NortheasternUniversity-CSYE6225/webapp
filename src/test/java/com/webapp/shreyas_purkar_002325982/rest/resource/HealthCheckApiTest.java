@@ -40,6 +40,7 @@ public class HealthCheckApiTest {
                 .header("Pragma", "no-cache");
     }
 
+    
     @Test
     void healthCheck_MultipleRequests() {
         for (int i = 0; i < 5; i++) {
