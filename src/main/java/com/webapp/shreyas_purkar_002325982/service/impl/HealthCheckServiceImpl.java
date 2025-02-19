@@ -34,7 +34,7 @@ public class HealthCheckServiceImpl implements HealthCheckService {
     public void healthCheck() {
         HealthCheckEntity entity = new HealthCheckEntity();
         entity.setDateTime(Instant.now());
-        entity;
+        
         try {
            repository.save(entity);
             log.info("Health check successful...");
