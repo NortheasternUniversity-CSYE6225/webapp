@@ -165,8 +165,8 @@ jobs:
 
             gcloud compute images add-iam-policy-binding $IMAGE_NAME \
             --member=serviceAccount:${{ secrets.GCP_DEMO_PROJECT_EMAIL }} \
-            --role=roles/compute.imageUser \
-            --project=${{ secrets.GCP_DEV_PROJECT_ID }}
+            --role=roles/compute.imageUser 
+            
             echo "IMAGE_NAME=$IMAGE_NAME" >> $GITHUB_ENV
 
       # Step 9: Set up Google Cloud SDK for Demo Project    
