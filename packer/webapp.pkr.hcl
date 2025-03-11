@@ -156,7 +156,7 @@ source "amazon-ebs" "webapp" {
   launch_block_device_mappings {
     delete_on_termination = true
     device_name           = "/dev/sda1"
-    volume_size           = var.aws_volume_size
+    volume_size           = 
     volume_type           = var.aws_volume_type
   }
 
@@ -173,8 +173,7 @@ source "googlecompute" "webapp" {
   machine_type            = var.gcp_machine_type
   zone                    = var.gcp_zone
   ssh_username            = var.ssh_username
-  image_storage_locations = ["us"]
-}
+  image_storage_locations = ["us"] }
 
 build {
   name = "webapp-custom-ami-build"
